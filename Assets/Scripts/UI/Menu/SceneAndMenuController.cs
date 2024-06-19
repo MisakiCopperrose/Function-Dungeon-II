@@ -10,8 +10,6 @@ namespace UI.Menu
         /// </summary>
         public void QuitGame()
         {
-            Debug.Log("Quit Game requested");
-
             Application.Quit();
         }
 
@@ -21,8 +19,6 @@ namespace UI.Menu
         /// <param name="sceneName"></param>
         public void SwitchSceneByName(string sceneName)
         {
-            Debug.Log("Switching to scene: " + sceneName);
-
             SceneManager.LoadScene(sceneName);
         }
 
@@ -32,8 +28,6 @@ namespace UI.Menu
         /// <param name="sceneIndex"></param>
         public void SwitchSceneByIndex(int sceneIndex)
         {
-            Debug.Log("Switching to scene index: " + sceneIndex);
-
             SceneManager.LoadScene(sceneIndex);
         }
 
@@ -48,9 +42,6 @@ namespace UI.Menu
             // Calculate next scene index
             var nextSceneIndex = (currentSceneIndex + 1) % SceneManager.sceneCountInBuildSettings;
 
-            // Log message to console
-            Debug.Log("Switching to next scene index: " + nextSceneIndex);
-
             // Load next scene by calculated index
             SceneManager.LoadScene(nextSceneIndex);
         }
@@ -64,9 +55,6 @@ namespace UI.Menu
             if (menu)
             {
                 menu.SetActive(!menu.activeSelf);
-
-                // Log the new state
-                Debug.Log("Menu " + (menu.activeSelf ? "opened" : "closed"));
             }
             else
             {

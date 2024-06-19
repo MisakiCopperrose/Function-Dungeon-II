@@ -11,7 +11,7 @@ namespace WaveSystem
 {
     public class BloomWaveManager : MonoBehaviour
     {
-        private const int WaveMaxIndex = 2;
+        private const int WaveMaxIndex = 3;
         
         [Header("Waves")] 
         [SerializeField] private List<NavMeshAgent> waveOne;
@@ -68,23 +68,23 @@ namespace WaveSystem
             _waveIndex++;
 
             StartCoroutine(StartWave());
-            
-            if (_waveIndex == WaveMaxIndex) 
-                onWavesCompleted?.Invoke();
         }
         
         private void DecrementEnemyCount()
         {
             _enemyCount--;
 
-            if (_enemyCount == 0)
-                onWaveCompleted.Invoke();
+            if (_enemyCount != 0) 
+                return;
+            
+            onWaveCompleted.Invoke();
+                
+            if (_waveIndex == WaveMaxIndex)
+                onWavesCompleted?.Invoke();
         }
 
         private IEnumerator StartWave()
         {
-            yield return new WaitForSeconds(spawnInterval);
-
             foreach (var enemy in _activeEnemies)
             {
                 enemy.gameObject.SetActive(true);

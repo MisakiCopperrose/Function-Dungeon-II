@@ -31,7 +31,7 @@ namespace Health
             get => _currentCollectiveHealth;
             private set
             {
-                if (!enableNegativeHealth && value < 0)
+                if (!enableNegativeHealth && value <= 0)
                 {
                     onDeath?.Invoke();
                     
@@ -55,6 +55,7 @@ namespace Health
             _damageables.Add(damageable);
             
             damageable.SubscribeToDamageEvent(RecalculateTotalHealth);
+            damageable.SubscribeToDeathEvent(RecalculateTotalHealth);
             
             RecalculateTotalHealth();
         }
@@ -68,6 +69,7 @@ namespace Health
             _damageables.Remove(damageable);
             
             damageable.UnsubscribeFromDamageEvent(RecalculateTotalHealth);
+            damageable.UnsubscribeFromDeathEvent(RecalculateTotalHealth);
             
             RecalculateTotalHealth();
         }

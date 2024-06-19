@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Events;
 using Health;
@@ -30,11 +31,27 @@ namespace Attacks
         {
             _transform = transform;
         }
-        
+
         protected override void Start()
         {
             base.Start();
             
+            _checkForTargetCoroutine = StartCoroutine(CheckForTargetCoroutine());
+        }
+        
+        private void ResetOnTargetDeath()
+        {
+            if (!gameObject.activeSelf)
+                return;
+            
+            if (_attackCoroutine != null)
+                StopCoroutine(_attackCoroutine);
+
+            _target.UnsubscribeFromDeathEvent(ResetOnTargetDeath);
+            _target = null;
+
+            onTargetDead.Invoke();
+
             _checkForTargetCoroutine = StartCoroutine(CheckForTargetCoroutine());
         }
 
@@ -65,26 +82,23 @@ namespace Attacks
             }
         }
 
-        private void ResetOnTargetDeath()
-        {
-            StopCoroutine(_attackCoroutine);
-            
-            _target.UnsubscribeFromDeathEvent(ResetOnTargetDeath);
-            _target = null;
-            
-            onTargetDead.Invoke();
-            
-            _checkForTargetCoroutine = StartCoroutine(CheckForTargetCoroutine());
-        }
-        
         private IEnumerator CheckForTargetCoroutine()
         {
             while (!_target)
             {
-                CheckForTarget();
+                try
+                {
+                    CheckForTarget();
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning($"Error checking for target: {e.Message}");
+                }
                 
                 yield return new WaitForSeconds(targetScanInterval);
             }
+            
+            yield return null;
         }
         
         private IEnumerator AttackCoroutine()
@@ -97,6 +111,8 @@ namespace Attacks
                 
                 yield return new WaitForSeconds(attackSpeed);
             }
+            
+            yield return null;
         }
     }
 }

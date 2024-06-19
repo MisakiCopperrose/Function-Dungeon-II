@@ -32,8 +32,6 @@ namespace Towers.Placement
             if (!_onClickHit.collider.TryGetComponent<TowerConfigurator>(out var tower))
                 return;
             
-            Debug.Log($"Tower found: {tower.name}");
-            
             onTowerFound.Invoke(tower);
         }
         
