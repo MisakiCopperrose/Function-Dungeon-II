@@ -76,8 +76,6 @@ namespace WaveSystem
         private void DecrementEnemyCount()
         {
             _enemyCount--;
-            
-            Debug.Log(_enemyCount);
 
             if (_enemyCount == 0)
                 onWaveCompleted.Invoke();
