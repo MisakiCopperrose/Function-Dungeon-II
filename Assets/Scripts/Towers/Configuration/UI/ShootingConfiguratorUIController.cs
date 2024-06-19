@@ -1,3 +1,4 @@
+using System;
 using LinearProjectiles;
 using UnityEngine;
 using Utils;
@@ -16,7 +17,7 @@ namespace Towers.Configuration.UI
 
         private float _a;
         private Vector3 _pointOnShootingCircle;
-
+        
         /// <summary>
         /// The angle of the shooting direction.
         /// </summary>
@@ -42,6 +43,11 @@ namespace Towers.Configuration.UI
                 shootingDirectionGuide.positionCount = LineResolution;
                 shootingDirectionGuide.SetPositions(new[] { ActiveTower.transform.position, _pointOnShootingCircle });
             }
+        }
+        
+        private void OnEnable()
+        {
+            A = 0;
         }
 
         /// <summary>

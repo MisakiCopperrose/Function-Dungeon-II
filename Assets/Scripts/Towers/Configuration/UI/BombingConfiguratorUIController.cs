@@ -1,3 +1,4 @@
+using System;
 using LinearProjectiles;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,14 +17,6 @@ namespace Towers.Configuration.UI
         private float _x;
         private float _y;
         private Vector3 _bombingPosition;
-
-        private void Start()
-        {
-            _x = 0;
-            _y = 0;
-            
-            UpdatePosition();
-        }
 
         /// <summary>
         /// The x coordinate of the bombing position.
@@ -68,6 +61,14 @@ namespace Towers.Configuration.UI
             gameObject.SetActive(false);
         }
 
+        private void OnEnable()
+        {
+            _x = 0;
+            _y = 0; 
+            
+            UpdatePosition();
+        }
+
         private void UpdatePosition()
         {
             if (UnityEngine.Camera.main is not { } mainCamera) 
@@ -83,7 +84,7 @@ namespace Towers.Configuration.UI
             bombingPositionGuide.rectTransform.position = mainCamera.WorldToScreenPoint(_bombingPosition);
             bombingPositionGuide.color = BombPositionInRange() ? Color.green : Color.red;
         }
-
+        
         private bool BombPositionInRange()
         {
             var distance = _bombingPosition.Distance(ActiveTower.transform.position);
