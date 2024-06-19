@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,6 +34,16 @@ namespace WorldGrid
         public Vector2Int PathEndIndex => pathIndices[^1];
 
         private void OnValidate()
+        {
+            UpdateData();
+        }
+
+        private void Awake()
+        {
+            UpdateData();
+        }
+
+        private void UpdateData()
         {
             GeneratedGrid = new GridTileTypes[xGridSize, yGridSize];
 
