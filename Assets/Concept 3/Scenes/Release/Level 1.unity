@@ -348,6 +348,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7310376458266892191, guid: fd54e0ed264cd48918045ac1c339c1c8, type: 3}
   m_PrefabInstance: {fileID: 1680474088652102813}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &275656717 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2410573822640024182, guid: fd54e0ed264cd48918045ac1c339c1c8, type: 3}
+  m_PrefabInstance: {fileID: 1680474088652102813}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275656708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79f243538455432cbc18b3d774db2cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &373553451 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4655970325866290055, guid: 6af1e2a55948149f0b63b41d10bd9735, type: 3}
@@ -1462,6 +1473,38 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2089789606}
+    - target: {fileID: 866651145305068097, guid: fd54e0ed264cd48918045ac1c339c1c8, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 866651145305068097, guid: fd54e0ed264cd48918045ac1c339c1c8, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 866651145305068097, guid: fd54e0ed264cd48918045ac1c339c1c8, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 275656717}
+    - target: {fileID: 866651145305068097, guid: fd54e0ed264cd48918045ac1c339c1c8, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 866651145305068097, guid: fd54e0ed264cd48918045ac1c339c1c8, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: EnableBuyButtons
+      objectReference: {fileID: 0}
+    - target: {fileID: 866651145305068097, guid: fd54e0ed264cd48918045ac1c339c1c8, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: Towers.Placement.BuyModeController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 866651145305068097, guid: fd54e0ed264cd48918045ac1c339c1c8, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 866651145305068097, guid: fd54e0ed264cd48918045ac1c339c1c8, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1816696209518879007, guid: fd54e0ed264cd48918045ac1c339c1c8, type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 0.5

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -8448291088817767745}
   - component: {fileID: -5125595317912632668}
   - component: {fileID: -5513209855550651050}
+  - component: {fileID: 6417224870616093775}
   m_Layer: 0
   m_Name: Bullet Tower
   m_TagString: Untagged
@@ -129,7 +130,19 @@ MonoBehaviour:
   enableNegativeHealth: 0
   onDeathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2999448396102145}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDamageEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -178,6 +191,18 @@ MonoBehaviour:
   onWaveStart: {fileID: 11400000, guid: 8564f0782fbc24e16a21a6b5cda31170, type: 2}
   onEnterBuildMode: {fileID: 11400000, guid: 8855556e189cc4657a04a5b7635f89bd, type: 2}
   projectilePrefab: {fileID: 743849356745063862, guid: c74dae0300fbf4ea0af59a9ed7d4b92e, type: 3}
+--- !u!210 &6417224870616093775
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2999448396102145}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1930000519376939816
 GameObject:
   m_ObjectHideFlags: 0

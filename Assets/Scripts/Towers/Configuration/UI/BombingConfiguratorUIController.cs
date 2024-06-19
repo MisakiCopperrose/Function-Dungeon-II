@@ -26,8 +26,16 @@ namespace Towers.Configuration.UI
             private get => $"{_x}";
             set
             {
-                _x = string.IsNullOrEmpty(value) ? 0 : float.Parse(StringExtensions.CleanUpDecimalOnlyString(value));
-                    
+
+                try
+                {
+                    _x = string.IsNullOrEmpty(value) ? 0 : float.Parse(StringExtensions.CleanUpDecimalOnlyString(value));
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning($"Error parsing X value: {e.Message}");
+                }
+                
                 UpdatePosition();
             }
         }
@@ -40,7 +48,14 @@ namespace Towers.Configuration.UI
             private get => $"{_y}";
             set
             {
-                _y = string.IsNullOrEmpty(value) ? 0 : float.Parse(StringExtensions.CleanUpDecimalOnlyString(value));
+                try
+                {
+                    _y = string.IsNullOrEmpty(value) ? 0 : float.Parse(StringExtensions.CleanUpDecimalOnlyString(value));
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning($"Error parsing Y value: {e.Message}");
+                }
                 
                 UpdatePosition();
             }
