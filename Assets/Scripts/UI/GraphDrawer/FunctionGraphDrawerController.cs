@@ -6,7 +6,7 @@ namespace UI.GraphDrawer
     {
         [SerializeField] private GameObject origin;
         
-        private void Start()
+        private void OnEnable()
         {
             transform.position = origin.transform.position;
         }
