@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0577f08d5d58349568806fe084c4ff56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 420
+  startHealth: 42
   enableNegativeHealth: 0
   onDeathEvent:
     m_PersistentCalls:

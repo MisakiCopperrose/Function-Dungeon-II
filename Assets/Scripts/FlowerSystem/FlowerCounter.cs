@@ -26,5 +26,10 @@ namespace FlowerSystem
                 onFlowerChange?.Invoke(value);
             }
         }
+        
+        public void IncreaseFlowerCount(int amount)
+        {
+            CurrentFlowerCount += amount;
+        }
     }
 }
