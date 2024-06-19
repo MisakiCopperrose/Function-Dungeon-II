@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1385989702630780348}
   - component: {fileID: 2381157406376694979}
   - component: {fileID: 3659620327391059428}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,6 +189,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startStrength: 10
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 64
   onStrengthChanged:
     m_PersistentCalls:
       m_Calls: []

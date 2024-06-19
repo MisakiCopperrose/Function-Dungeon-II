@@ -11,6 +11,7 @@ namespace Attacks
     {
         [Header("Attack Settings")]
         [SerializeField, Min(0.01f)] private float startStrength = 1f;
+        [SerializeField] protected LayerMask attackLayer;
         
         [Header("Events")]
         [SerializeField] private FloatEvent onStrengthChanged = new();

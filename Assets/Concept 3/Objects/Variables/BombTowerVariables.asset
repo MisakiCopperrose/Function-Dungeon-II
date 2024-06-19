@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BombTowerVariables
   m_EditorClassIdentifier: 
   flowerCost: 75
-  fireRate: 4
+  fireRate: 2
   fireRange: 10

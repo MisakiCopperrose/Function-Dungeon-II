@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -5125595317912632668}
   - component: {fileID: -5513209855550651050}
   - component: {fileID: 6417224870616093775}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bullet Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -213,7 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6846201999301432432}
   - component: {fileID: 5408878779410796982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 565772817717844625}
   - component: {fileID: 7862905756534666873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RangeSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

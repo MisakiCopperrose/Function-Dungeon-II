@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2423925787375125342}
   - component: {fileID: 2381157406376694979}
   - component: {fileID: 3771996365874032907}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0577f08d5d58349568806fe084c4ff56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 6
+  startHealth: 7
   enableNegativeHealth: 0
   onDeathEvent:
     m_PersistentCalls:
@@ -189,6 +189,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startStrength: 30
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 64
   onStrengthChanged:
     m_PersistentCalls:
       m_Calls: []
