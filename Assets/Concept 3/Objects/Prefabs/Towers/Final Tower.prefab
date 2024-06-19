@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2310586646898390164}
   - component: {fileID: -164041528625119128}
   m_Layer: 0
-  m_Name: FinalCastle
+  m_Name: Final Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
