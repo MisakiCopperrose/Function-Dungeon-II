@@ -8,6 +8,10 @@ namespace LinearProjectiles
 
         private Vector3 _endPosition;
 
+        /// <summary>
+        /// Shoots the projectile to the end position.
+        /// </summary>
+        /// <param name="endPosition"> The position where the projectile should go. </param>
         public void Shoot(Vector3 endPosition)
         {
             _endPosition = endPosition;

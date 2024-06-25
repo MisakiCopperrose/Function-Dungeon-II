@@ -37,6 +37,10 @@ namespace LinearProjectiles
             onEnterBuildMode.RemoveListener(StopShooting);
         }
         
+        /// <summary>
+        /// Sets the position where the projectile should go.
+        /// </summary>
+        /// <param name="position"> The position where the projectile should go. </param>
         public void SetShootingPosition(Vector3 position)
         {
             _shootingPosition = position;
@@ -62,6 +66,7 @@ namespace LinearProjectiles
                 var projectile = _projectilePool.GetPooledObject();
                 var direction = (_shootingPosition - transform.position).normalized;
 
+                // Places projectiles away from the tower to avoid collision with it.
                 var startingPosition =
                     transform.position +
                     direction * projectilePrefab.transform.localScale.x +
