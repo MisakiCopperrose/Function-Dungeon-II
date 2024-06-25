@@ -1,4 +1,5 @@
 using System.Collections;
+using Attributes;
 using Events.GameEvents;
 using Towers.Configuration;
 using UnityEngine;
@@ -11,7 +12,7 @@ namespace LinearProjectiles
     {
         [SerializeField] private GameEvent onWaveStart;
         [SerializeField] private GameEvent onEnterBuildMode;
-        [SerializeField] private SimpleProjectile projectilePrefab;
+        [SerializeField, Expandable] private SimpleProjectile projectilePrefab;
         
         private SimpleObjectPool<SimpleProjectile> _projectilePool;
         private TowerConfigurator _towerConfigurator;
