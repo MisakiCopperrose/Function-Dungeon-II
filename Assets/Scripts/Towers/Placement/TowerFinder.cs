@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 
 namespace Towers.Placement
 {
+    /// <summary>
+    /// A component that finds a tower on click.
+    /// </summary>
     public class TowerFinder : MonoBehaviour
     {
         [SerializeField] private TowerConfigurationEvent onTowerFound = new();

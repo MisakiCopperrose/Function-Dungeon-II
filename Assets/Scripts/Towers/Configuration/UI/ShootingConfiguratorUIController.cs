@@ -1,4 +1,3 @@
-using System;
 using LinearProjectiles;
 using UnityEngine;
 using Utils;

@@ -4,6 +4,9 @@ using UnityEngine.Events;
 
 namespace Towers
 {
+    /// <summary>
+    /// Sets the start currency.
+    /// </summary>
     public class SetStartCurrency : MonoBehaviour
     {
         [Header("Currency")]
